@@ -16,7 +16,7 @@ void Roll::roll_dice() {
 }
 
 // return rolled value
-int Roll::roll_value () const {
+int Roll::roll_value() const {
     return rolled_value;
 }
 
