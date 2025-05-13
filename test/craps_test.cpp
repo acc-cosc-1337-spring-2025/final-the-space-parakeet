@@ -4,6 +4,8 @@
 #include "die.h"
 #include "roll.h"
 #include "shooter.h"
+#include "come_out_phase.h"
+#include "point_phase.h"
 #include <iostream>
 
 using std::cout;
@@ -57,6 +59,40 @@ TEST_CASE("shooter returns a roll with values between [2, 12]") {
 		roll = shooter.throw_dice(die1, die2);
 		cout << "\trolled:\t" << roll->roll_value() << "\n";
 		REQUIRE(2 <= roll->roll_value() && roll->roll_value() <= 12);
+	}
+}
+
+TEST_CASE("come out phase returns outcomes: natural, craps, point") {
+	Shooter shooter {};
+	Die die1 {};
+	Die die2 {};
+	Roll* roll;
+	ComeOutPhase come_out_phase {};
+	for (int i = 0; i < 10; ++i) {
+		roll = shooter.throw_dice(die1, die2);
+		REQUIRE(
+			come_out_phase.get_outcome(roll) == RollOutcome::NATURAL
+		||  come_out_phase.get_outcome(roll) == RollOutcome::CRAPS
+		||  come_out_phase.get_outcome(roll) == RollOutcome::NOPOINT
+		);
+	}
+}
+
+
+TEST_CASE("shooter phase returns outcomes: point, seven out, nopoint") {
+	Shooter shooter {};
+	Die die1 {};
+	Die die2 {};
+	Roll* roll;
+	roll = shooter.throw_dice(die1, die2);
+	PointPhase point_phase {roll->roll_value()};
+	for (int i = 0; i < 10; ++i) {
+		roll = shooter.throw_dice(die1, die2);
+		REQUIRE(
+			point_phase.get_outcome(roll) == RollOutcome::POINT
+		||  point_phase.get_outcome(roll) == RollOutcome::SEVEN_OUT
+		||  point_phase.get_outcome(roll) == RollOutcome::NOPOINT
+		);
 	}
 }
 
