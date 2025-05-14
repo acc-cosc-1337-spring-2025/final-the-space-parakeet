@@ -3,11 +3,12 @@
 #include "catch.hpp"
 #include "roll.h"
 #include "die.h"
+#include "shooter.h"
 #include <iostream>
 
 using std::cout;
 
-// TEST_CASE("die rolls values in range [1, 6]") {
+// TEST_CASE("Die rolls values in range [1, 6].") {
 // 	Die die {};
 // 	int rolled;
 // 	int sum = 0;
@@ -22,7 +23,7 @@ using std::cout;
 // }
 
 
-TEST_CASE("die rolls values in range [1, 6]") {
+TEST_CASE("Die rolls values in range [1, 6].") {
 	Die die {};
 	int rolled;
 	for (int i = 0; i < 10; ++i) {
@@ -32,7 +33,7 @@ TEST_CASE("die rolls values in range [1, 6]") {
 	}
 }
 
-// TEST_CASE("two dice roll values in range [2, 12] (check indiv. dice values are unique)") {
+// TEST_CASE("Two dice roll values in range [2, 12] (check indiv. dice values are unique).") {
 // 	Die die1 {};
 // 	Die die2 {};
 // 	int rolled1;
@@ -54,7 +55,7 @@ TEST_CASE("die rolls values in range [1, 6]") {
 // }
 
 
-TEST_CASE("two dice roll values in range [2, 12]") {
+TEST_CASE("Two dice roll values in range [2, 12].") {
 	Die die1 {};
 	Die die2 {};
 	Roll roll {die1, die2};
@@ -64,5 +65,20 @@ TEST_CASE("two dice roll values in range [2, 12]") {
 		REQUIRE(roll.roll_value() <= 12);
 	}
 }
+
+TEST_CASE("Shooter returns pointer to roll with values between [2, 12].") {
+	Die die1 {};
+	Die die2 {};
+	Roll* roll;
+	Shooter shooter {};
+	for (int i = 0; i < 10; ++i) {
+		roll = shooter.throw_dice(die1, die2);
+		REQUIRE(2 <= roll->roll_value());
+		REQUIRE(roll->roll_value() <= 12);
+	}
+}
+
+
+
 
 
