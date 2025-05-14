@@ -95,7 +95,7 @@ TEST_CASE("come out phase returns outcomes: natural, craps, point") {
 		}
 	}
 }
-
+    
 TEST_CASE("shooter phase returns outcomes: point, seven out, nopoint") {
 	Shooter shooter {};
 	Die die1 {};
