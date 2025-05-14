@@ -4,6 +4,8 @@
 #include "roll.h"
 #include "die.h"
 #include "shooter.h"
+#include "come_out_phase.h"
+#include "point_phase.h"
 #include <iostream>
 
 using std::cout;
@@ -75,6 +77,37 @@ TEST_CASE("Shooter returns pointer to roll with values between [2, 12].") {
 		roll = shooter.throw_dice(die1, die2);
 		REQUIRE(2 <= roll->roll_value());
 		REQUIRE(roll->roll_value() <= 12);
+	}
+}
+
+TEST_CASE("come out phase returns outcomes: natural, craps, point") {
+	Shooter shooter {};
+	Die die1 {};
+	Die die2 {};
+	Roll* roll;
+	ComeOutPhase come_out_phase {};
+	for (int i = 0; i < 10; ++i) {
+		roll = shooter.throw_dice(die1, die2);
+		switch (roll->roll_value()) {
+			case 7: case 11:               REQUIRE(come_out_phase.get_outcome(roll) == RollOutcome::NATURAL); break;
+			case 2: case 3: case 12:       REQUIRE(come_out_phase.get_outcome(roll) == RollOutcome::CRAPS); break;
+			default:                       REQUIRE(come_out_phase.get_outcome(roll) == RollOutcome::POINT); break;
+		}
+	}
+}
+
+TEST_CASE("shooter phase returns outcomes: point, seven out, nopoint") {
+	Shooter shooter {};
+	Die die1 {};
+	Die die2 {};
+	Roll* roll = shooter.throw_dice(die1, die2);
+	int point = roll->roll_value();
+	PointPhase point_phase {point};
+	for (int i = 0; i < 10; ++i) {
+		roll = shooter.throw_dice(die1, die2);
+		if (roll->roll_value() == point) 	REQUIRE(point_phase.get_outcome(roll) == RollOutcome::POINT);
+		else if (roll->roll_value() == 7)	REQUIRE(point_phase.get_outcome(roll) == RollOutcome::SEVEN_OUT);
+		else								REQUIRE(point_phase.get_outcome(roll) == RollOutcome::NOPOINT);
 	}
 }
 
