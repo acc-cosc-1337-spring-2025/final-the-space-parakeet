@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcraps_library.a CMakeFiles/craps_library.dir/roll.cpp.o CMakeFiles/craps_library.dir/die.cpp.o CMakeFiles/craps_library.dir/shooter.cpp.o CMakeFiles/craps_library.dir/phase.cpp.o CMakeFiles/craps_library.dir/point_phase.cpp.o CMakeFiles/craps_library.dir/come_out_phase.cpp.o
+/usr/bin/ranlib libcraps_library.a

@@ -1,0 +1,52 @@
+Start testing: May 14 00:02 UTC
+----------------------------------------------------------
+1/1 Testing: craps_tests
+1/1 Test: craps_tests
+Command: "/workspaces/final-the-space-parakeet/test/craps_tests" "-s"
+Directory: /workspaces/final-the-space-parakeet/test
+"craps_tests" start time: May 14 00:02 UTC
+Output:
+----------------------------------------------------------
+	rolled:	2
+	rolled:	2
+	rolled:	2
+	rolled:	5
+	rolled:	6
+	rolled:	5
+	rolled:	5
+	rolled:	4
+	rolled:	5
+	rolled:	5
+	rolled:	6
+	rolled:	7
+	rolled:	8
+	rolled:	5
+	rolled:	6
+	rolled:	8
+	rolled:	6
+	rolled:	7
+	rolled:	8
+	rolled:	6
+	rolled:	12
+	rolled:	5
+	rolled:	8
+	rolled:	8
+	rolled:	9
+	rolled:	6
+	rolled:	5
+	rolled:	10
+	rolled:	6
+	rolled:	2
+===============================================================================
+test cases: 5 | 5 passed
+assertions: - none -
+
+<end of output>
+Test time =   0.00 sec
+----------------------------------------------------------
+Test Passed.
+"craps_tests" end time: May 14 00:02 UTC
+"craps_tests" time elapsed: 00:00:00
+----------------------------------------------------------
+
+End testing: May 14 00:02 UTC

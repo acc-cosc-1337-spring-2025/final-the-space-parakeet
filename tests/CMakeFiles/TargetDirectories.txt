@@ -1,0 +1,3 @@
+/workspaces/final-the-space-parakeet/test/CMakeFiles/edit_cache.dir
+/workspaces/final-the-space-parakeet/test/CMakeFiles/rebuild_cache.dir
+/workspaces/final-the-space-parakeet/test/CMakeFiles/craps_tests.dir

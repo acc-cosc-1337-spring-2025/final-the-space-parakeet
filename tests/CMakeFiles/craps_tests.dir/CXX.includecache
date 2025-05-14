@@ -1,0 +1,24 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/workspaces/final-the-space-parakeet/test/craps_test.cpp
+catch.hpp
+/workspaces/final-the-space-parakeet/test/catch.hpp
+die.h
+/workspaces/final-the-space-parakeet/test/die.h
+roll.h
+/workspaces/final-the-space-parakeet/test/roll.h
+shooter.h
+/workspaces/final-the-space-parakeet/test/shooter.h
+come_out_phase.h
+/workspaces/final-the-space-parakeet/test/come_out_phase.h
+point_phase.h
+/workspaces/final-the-space-parakeet/test/point_phase.h
+iostream
+-
+

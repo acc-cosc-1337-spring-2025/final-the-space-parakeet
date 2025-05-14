@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/craps_tests.dir/craps_test.o -o craps_tests  -lcraps_library 

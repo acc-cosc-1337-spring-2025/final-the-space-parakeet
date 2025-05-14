@@ -1,0 +1,4 @@
+/workspaces/final-the-space-parakeet/src/CMakeFiles/rebuild_cache.dir
+/workspaces/final-the-space-parakeet/src/CMakeFiles/edit_cache.dir
+/workspaces/final-the-space-parakeet/src/CMakeFiles/craps_exe.dir
+/workspaces/final-the-space-parakeet/src/CMakeFiles/craps_library.dir

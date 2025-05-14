@@ -1,0 +1,12 @@
+/workspaces/final-the-space-parakeet/CMakeFiles/rebuild_cache.dir
+/workspaces/final-the-space-parakeet/CMakeFiles/edit_cache.dir
+/workspaces/final-the-space-parakeet/CMakeFiles/test.dir
+/workspaces/final-the-space-parakeet/src/CMakeFiles/rebuild_cache.dir
+/workspaces/final-the-space-parakeet/src/CMakeFiles/edit_cache.dir
+/workspaces/final-the-space-parakeet/src/CMakeFiles/test.dir
+/workspaces/final-the-space-parakeet/src/CMakeFiles/craps_exe.dir
+/workspaces/final-the-space-parakeet/src/CMakeFiles/craps_library.dir
+/workspaces/final-the-space-parakeet/test/CMakeFiles/edit_cache.dir
+/workspaces/final-the-space-parakeet/test/CMakeFiles/test.dir
+/workspaces/final-the-space-parakeet/test/CMakeFiles/rebuild_cache.dir
+/workspaces/final-the-space-parakeet/test/CMakeFiles/craps_tests.dir
